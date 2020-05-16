@@ -2,27 +2,33 @@
   "products": [
     {
       "id": "123",
-      "title": "Nome do produto 01",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 50
+      "title": "Cadeira Gamer Charles",
+      "image_url": "https://portalevolua.s3.us-east-1.amazonaws.com/Assets/teste/cadeira1.png",
+      "price": 100
     },
     {
       "id": "1234",
-      "title": "Nome do produto 02",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 60
+      "title": "Cadeira Gamer Travis Red",
+      "image_url": "https://portalevolua.s3.us-east-1.amazonaws.com/Assets/teste/cadeira2.png",
+      "price": 200
     },
     {
       "id": "12345",
-      "title": "Nome do produto 03",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 70
+      "title": "Cadeira Gamer Awesome Job",
+      "image_url": "https://portalevolua.s3.us-east-1.amazonaws.com/Assets/teste/cadeira3.png",
+      "price": 300
     },
     {
       "id": "123456",
-      "title": "Nome do produto 04",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 80
+      "title": "Cadeira da RocketSeat",
+      "image_url": "https://portalevolua.s3.us-east-1.amazonaws.com/Assets/teste/cadeira4.png",
+      "price": 400
+    },
+    {
+      "id": "1234567",
+      "title": "Nome do produto 05",
+      "image_url": "https://portalevolua.s3.us-east-1.amazonaws.com/Assets/teste/cadeira5.png",
+      "price": 500
     }
   ]
 }
