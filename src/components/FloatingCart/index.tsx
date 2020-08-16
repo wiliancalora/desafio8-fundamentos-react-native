@@ -33,8 +33,7 @@ const FloatingCart: React.FC = () => {
 
   const totalItensInCart = useMemo(() => {
     // TODO RETURN THE SUM OF THE QUANTITY OF THE PRODUCTS IN THE CART
-
-    return products.length;
+    return products.reduce((prev, cur) => cur.quantity + prev, 0);
   }, [products]);
 
   return (
