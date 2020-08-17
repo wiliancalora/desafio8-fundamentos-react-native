@@ -31,17 +31,12 @@ const CartProvider: React.FC = ({ children }) => {
   useEffect(() => {
     async function loadProducts(): Promise<void> {
       // TODO LOAD ITEMS FROM ASYNC STORAGE
-      // await AsyncStorage.removeItem('@GoMarketplace:productsCart');
-      // setProducts(null);
       const productsCart = await AsyncStorage.getItem(
         '@GoMarketplace:productsCart',
       );
 
       if (productsCart) {
-        setProducts(JSON.parse(productsCart));
-      } else {
-        setProducts([]);
-        return;
+        setProducts([...JSON.parse(productsCart)]);
       }
     }
 
@@ -50,17 +45,16 @@ const CartProvider: React.FC = ({ children }) => {
 
   const addToCart = useCallback(
     async (product: Product) => {
-      const items = [...products];
+      const productsExists = products.find(p => p.id === product.id);
 
-      if (product) {
-        const productIndex = items.findIndex(p => p.id === product.id);
-        if (productIndex === -1) {
-          items.push({ ...product, quantity: 1 });
-        } else {
-          items[productIndex].quantity += 1;
-        }
-
-        setProducts(items);
+      if (productsExists) {
+        setProducts(
+          products.map(p =>
+            p.id === product.id ? { ...product, quantity: p.quantity + 1 } : p,
+          ),
+        );
+      } else {
+        setProducts([...products, { ...product, quantity: 1 }]);
       }
 
       await AsyncStorage.setItem(
